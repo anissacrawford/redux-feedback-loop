@@ -1,6 +1,10 @@
 import {useHistory} from 'react-router-dom';
 
+
+
 function Feedback (){
+
+    const feeling = useSelector(store => store.feelingsReducer)
 
     const history = useHistory();
 
@@ -12,7 +16,7 @@ function Feedback (){
         <>
         <div onClick={(event) => handleSubmit(event)}>
         <h1 className="center">Review Your Feedback</h1>
-        <h2 className="center">Feelings:</h2>
+        <h2 className="center">Feelings: {feeling}</h2>
         <h2 className="center">Understanding:</h2>
         <h2 className="center">Support:</h2>
         <h2 className="center">Comments:</h2>

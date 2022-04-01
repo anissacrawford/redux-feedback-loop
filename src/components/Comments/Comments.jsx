@@ -12,7 +12,7 @@ function Comments () {
         <>
          <form onSubmit={(event) => handleSubmit(event)}>
          <h1 className="center">Any comments you want to leave?</h1>
-         <input type="number"/>
+         <input type="text"/>
          <button type="submit">NEXT</button>
          </form>
         </>
