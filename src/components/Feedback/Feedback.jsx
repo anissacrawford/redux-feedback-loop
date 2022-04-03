@@ -39,14 +39,14 @@ function Feedback (){
 
     return (
         <ThemeProvider theme={theme}>
-            <div>
-                <h1 className="center">Review Your Feedback</h1>
-                <h2 className="center">Feeling: {feeling}</h2>
-                <h2 className="center">Understanding: {understanding}</h2>
-                <h2 className="center">Support: {support}</h2>
-                <h2 className="center">Comments: {comments}</h2>
+            <div className="center">
+                <h1>Review Your Feedback</h1>
+                <h2>Feeling: {feeling}</h2>
+                <h2>Understanding: {understanding}</h2>
+                <h2>Support: {support}</h2>
+                <h2>Comments: {comments}</h2>
                 
-                <div className="center">
+                <div>
                     <Button variant="outlined" color="primary"  onClick={(event) => handleSubmit(event)}>SUBMIT</Button>
                 </div>
             </div>

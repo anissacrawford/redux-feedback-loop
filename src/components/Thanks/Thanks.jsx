@@ -21,11 +21,11 @@ function Thanks () {
 
     return(
         <ThemeProvider theme={theme}>
-            <div>
-                <h1 className="center">Your feedback was submitted!</h1>
-                <h2 className="center">Thank You</h2>
+            <div className="center">
+                <h1>Your feedback was submitted!</h1>
+                <h2>Thank You</h2>
 
-                <div className="center">
+                <div>
                     <Button variant="outlined" color="primary" onClick={(event) => handleSubmit(event)}>Leave New Feedback</Button>
                 </div>
             </div>

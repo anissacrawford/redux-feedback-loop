@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import {Button} from '@material-ui/core';
 import  {createTheme, ThemeProvider} from '@material-ui/core/styles';
 import swal from 'sweetalert';
+import Input from '@material-ui/core/Input';
 
 
 const theme = createTheme({
@@ -42,15 +43,10 @@ function Support () {
     return (
         <ThemeProvider theme={theme}>
             <div className="center">
-                <h1 className="center">How well are you being supported?</h1>
-                <input type="number" value={supportInput} onChange={(event) => setSupportInput(event.target.value)}/>
+                <h1>How well are you being supported?</h1>
+                <Input placeholder="on a scale of 1-5" inputProps={{ 'aria-label': 'description' }} type="number" value={supportInput} onChange={(event) => setSupportInput(event.target.value)}/>
                 <Button variant="outlined" color="primary" onClick={(event) => handleChange(event)}>NEXT</Button>
             </div>  
-
-            <footer className="note">
-                <p>PLEASE NOTE: </p>
-                <p>A value of 1 (not well) through 5 (extremely well) must be provided before continuing.</p>
-            </footer>
         </ThemeProvider>
     )
 }
