@@ -3,7 +3,8 @@ import {useDispatch} from 'react-redux';
 import React, { useState } from 'react';
 
 import {Button} from '@material-ui/core';
-import  {createTheme, ThemeProvider} from '@material-ui/core/styles'
+import  {createTheme, ThemeProvider} from '@material-ui/core/styles';
+import swal from 'sweetalert';
 
 
 const theme = createTheme({
@@ -23,7 +24,12 @@ function Understanding (){
 
     const handleChange = (event) => {
         if (understandingInput > 5 || understandingInput == 0){
-            alert('Please enter a valid value')
+            swal({
+                title: "Uh Oh!",
+                text: "Please enter a valid response",
+                icon: "error",
+                button: "Okay",
+            });
         } else (
         dispatch({
             type: "SET_UNDERSTANDING",

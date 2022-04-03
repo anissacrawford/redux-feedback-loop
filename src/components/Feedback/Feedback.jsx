@@ -3,8 +3,7 @@ import {useSelector} from 'react-redux';
 import axios from 'axios';
 
 import {Button} from '@material-ui/core';
-import  {createTheme, ThemeProvider} from '@material-ui/core/styles'
-
+import  {createTheme, ThemeProvider} from '@material-ui/core/styles';
 
 const theme = createTheme({
   palette: {
@@ -42,7 +41,7 @@ function Feedback (){
         <ThemeProvider theme={theme}>
             <div>
                 <h1 className="center">Review Your Feedback</h1>
-                <h2 className="center">Feelings: {feeling}</h2>
+                <h2 className="center">Feeling: {feeling}</h2>
                 <h2 className="center">Understanding: {understanding}</h2>
                 <h2 className="center">Support: {support}</h2>
                 <h2 className="center">Comments: {comments}</h2>
