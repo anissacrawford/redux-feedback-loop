@@ -38,7 +38,7 @@ The parts:
 
 ### Input Validation
 
-[ ] Each step should only allow the user to advance to the next step if a score was provided. Be sure to tell the user in some way that a value must be provided.
+[x] Each step should only allow the user to advance to the next step if a score was provided. Be sure to tell the user in some way that a value must be provided.
 
 [x] The `Comments` step does not need to be validated, an empty value is okay.
 
