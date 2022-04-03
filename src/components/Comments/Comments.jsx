@@ -19,12 +19,15 @@ function Comments () {
 
     return (
         <>
-         <div>
-         <h1 className="center">Any comments you want to leave?</h1>
-         <input type="text" value={commentInput} onChange={(event) => setCommentInput(event.target.value)}/>
+            <div className="center">
+                <h1 className="center">Any comments you want to leave?*</h1>
+                <input type="text" value={commentInput} onChange={(event) => setCommentInput(event.target.value)}/>
+                <button onClick={(event) => handleChange(event)}>NEXT</button>
+            </div>
 
-         <button onClick={(event) => handleChange(event)}>NEXT</button>
-         </div>
+            <footer className="note">
+                <p>*OPTIONAL</p>
+            </footer>
         </>
     )
 }
