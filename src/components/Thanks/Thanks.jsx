@@ -10,11 +10,11 @@ function Thanks () {
 
     return(
         <>
-            <form onSubmit={(event) => handleSubmit(event)}>
+            <div>
             <h1 className="center">Submission Submitted</h1>
             <h1 className="center">Thank You!</h1>
-            <button type="submit">Leave New Feedback</button>
-            </form>
+            <button onClick={(event) => handleSubmit(event)}>Leave New Feedback</button>
+            </div>
         </>
     )
 }
