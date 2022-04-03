@@ -2,6 +2,18 @@ import {useHistory} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import axios from 'axios';
 
+import {Button} from '@material-ui/core';
+import  {createTheme, ThemeProvider} from '@material-ui/core/styles'
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#AF8AE4'
+    }
+  }
+})
+
 function Feedback (){
 
     const feeling = useSelector(store => store.feelingsReducer)
@@ -27,7 +39,7 @@ function Feedback (){
     }
 
     return (
-        <>
+        <ThemeProvider theme={theme}>
             <div>
                 <h1 className="center">Review Your Feedback</h1>
                 <h2 className="center">Feelings: {feeling}</h2>
@@ -36,10 +48,10 @@ function Feedback (){
                 <h2 className="center">Comments: {comments}</h2>
                 
                 <div className="center">
-                    <button onClick={(event) => handleSubmit(event)}>SUBMIT</button>
+                    <Button variant="outlined" color="primary"  onClick={(event) => handleSubmit(event)}>SUBMIT</Button>
                 </div>
             </div>
-        </>
+        </ThemeProvider>
     )
 }
 
