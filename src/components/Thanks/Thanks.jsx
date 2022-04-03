@@ -2,8 +2,6 @@ import {useHistory} from 'react-router-dom';
 
 import {Button} from '@material-ui/core';
 import  {createTheme, ThemeProvider} from '@material-ui/core/styles';
-import swal from 'sweetalert';
-
 
 const theme = createTheme({
   palette: {
@@ -24,7 +22,8 @@ function Thanks () {
     return(
         <ThemeProvider theme={theme}>
             <div>
-                <h2 className="center">Thank You!</h2>
+                <h1 className="center">Your feedback was submitted!</h1>
+                <h2 className="center">Thank You</h2>
 
                 <div className="center">
                     <Button variant="outlined" color="primary" onClick={(event) => handleSubmit(event)}>Leave New Feedback</Button>

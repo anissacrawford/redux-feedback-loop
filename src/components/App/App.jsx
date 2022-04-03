@@ -16,7 +16,7 @@ function App() {
     <Router>
     <div className='App'>
       <header className='App-header'>
-        <h1 className='App-title'>Prime Feedback</h1>
+        <h1 className='App-title'>PRIME FEEDBACK</h1>
       </header>
     </div>
 
